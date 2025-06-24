@@ -1,0 +1,97 @@
+📒 Bloc-Note de Suivi — Projet TeamTask (MERN + Redux Toolkit)
+🎯 Objectif du projet :
+Créer une application de gestion de tâches interne pour une équipe, avec un système :
+
+Multi-utilisateurs.
+
+Multi-rôles (utilisateur et manager).
+
+Authentification sécurisée avec JSON Web Tokens (JWT).
+
+✅ Fonctionnalités développées jusqu’ici :
+1️⃣ Mise en place de l’environnement backend :
+Création du projet backend Node.js.
+
+Installation des dépendances essentielles :
+
+express
+
+mongoose
+
+dotenv
+
+cors
+
+bcryptjs
+
+jsonwebtoken
+
+Configuration du fichier principal app.js.
+
+Connexion réussie à la base MongoDB.
+
+Démarrage réussi du serveur backend sur le port 5000.
+
+2️⃣ Mise en place de l’authentification :
+Création du modèle User :
+
+Champs : username, password (hashé), role (user ou manager).
+
+Mise en place des routes :
+
+/api/auth/register → Inscription.
+
+/api/auth/login → Connexion.
+
+Génération des tokens JWT à la connexion et à l’inscription.
+
+Gestion des mots de passe sécurisée avec bcryptjs.
+
+Stockage prévu du token dans le localStorage (côté frontend plus tard).
+
+3️⃣ Préparation de la sécurité des routes :
+Création d’un middleware protect → protège les routes avec vérification du token JWT.
+
+Création d’un middleware managerOnly → autorise uniquement les managers à accéder à certaines routes.
+
+🔄 Tests réalisés avec Postman :
+✔️ Inscription d’un utilisateur réussie.
+
+✔️ Connexion d’un utilisateur réussie.
+
+✔️ Réception correcte du token JWT.
+
+🟢 État d’avancement actuel :
+Fonctionnalité	État
+Configuration backend	✅ Terminé
+Connexion MongoDB	✅ Terminé
+Authentification avec JWT	✅ Terminé
+Gestion des rôles (user/manager)	✅ Terminé
+Middleware de protection des routes	✅ Terminé
+Tests API Postman (register/login)	✅ Terminé
+CRUD des tâches	🔜 À faire
+Intégration frontend (React + Redux)	🔜 À faire
+
+🔜 Prochaines étapes possibles :
+🔹 Création des modèles et routes CRUD pour les tâches.
+
+🔹 Mise en place du Redux Toolkit dans le frontend React.
+
+🔹 Gestion des rôles côté frontend (afficher uniquement les tâches autorisées).
+
+🔹 Protection des routes côté frontend avec le token JWT.
+
+Si tu veux, je peux te préparer ce résumé sous forme de fichier texte ou fichier Markdown que tu pourras garder pour ton projet.
+
+👉 Veux-tu que je te le prépare en fichier téléchargeable ? 
+
+
+***************
+| Étape                | Description                                                         |
+| -------------------- | ------------------------------------------------------------------- |
+| 1. Configurer Redux  | Installer Redux Toolkit, configurer store, slices `auth` et `tasks` |
+| 2. Créer pages auth  | Page Inscription + Connexion avec appels API, gestion token         |
+| 3. Créer dashboard   | Afficher la liste des tâches, ajout filtre par statut               |
+| 4. Modifier tâches   | Permettre modifier statut tâche, rafraîchir liste                   |
+| 5. Protéger routes   | Implémenter redirections selon auth status                          |
+| 6. (Optionnel) Admin | Créer page admin, API utilisateurs                                  |
